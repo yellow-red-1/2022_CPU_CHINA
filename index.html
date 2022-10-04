@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="./static/css/font.css"/>
+    <link type="text/css" href="./static/css/footer.css"/>
+    <title>首页</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            font-size: 16px;
+            font-family: 微软雅黑;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            list-style: none;
+            cursor: pointer;
+            color: #ffffff;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+        }
+
+        .firstbox {
+            width: 100%;
+            height: 969px;
+            background-size: 100% 100%;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        
+        .nav {
+            height: 150px;
+            width: 130px;
+            top: 5px;
+            right: 96px;
+            position: fixed;
+            background-image: url(./static/imgs/cat_navigation.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            transform: translate(50%, 50%);
+            z-index: 10;
+        }
+
+        .nav:hover {
+            height: 83px;
+            /*width: 73px;*/
+            width: 400px;
+            cursor: pointer;
+        }
+
+        .navbox {
+            position: fixed;
+            /*width: 389px;*/
+            width: 800px;
+            height: 300px;
+            top: 1px;
+            right: 133px;
+            left: 1300px;
+            z-index: 15;
+            display: none;
+        }
+
+
+        .content {
+            /*height: 1300px;*/
+            height: 1300px;
+            /*            height: 1250px;*/
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        .leftLine {
+            position: absolute;
+            top: 920px;
+            width: 5px;
+            background-color: #acb7c0;
+            height: 1550px;
+            left: 350px;
+            z-index: 15;
+        }
+
+        .side {
+            height: 100%;
+            width: 350px;
+            border-right: #acb7c0 solid 5px;
+            /*float: left;*/
+        }
+
+        .DNApng {
+            position: absolute;
+            height: 209px;
+            width: 270px;
+            top: 860px;
+            left: -150px;
+            background-image: url(./static/imgs/DNAside.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            animation: rotate 10s linear infinite;
+        }
+
+        .circular {
+            position: absolute;
+            height: 147px;
+            width: 144px;
+            top: 1500px;
+            left: 250px;
+            /* transform: scale(0.8); */
+            background-repeat: no-repeat;
+            background-image: url("./static/imgs/bigcircular.png");
+            animation: rotate 10s linear infinite;
+        }
+
+        .circular_white {
+            position: absolute;
+            height: 250px;
+            width: 85px;
+            top: 1450px;
+            left: 350px;
+            background-color: white;
+        }
+
+        .circular_white2 {
+            position: absolute;
+            height: 200px;
+            width: 150px;
+            top: 1350px;
+            left: 200px;
+            background-color: white;
+        }
+
+        .circular2 {
+            position: absolute;
+            height: 255px;
+            width: 250px;
+            top: 1775px;
+            left: -120px;
+            transform: scale(0.8);
+            background-repeat: no-repeat;
+            background-image: url("./static/imgs/circular.png");
+            /* animation: rotate 10s linear infinite; */
+        }
+
+        .arrow_left {
+            position: absolute;
+            height: 101px;
+            width: 41px;
+            top: 1650px;
+            left: 170px;
+            background-repeat: no-repeat;
+            background-image: url("./static/imgs/arrow.png");
+        }
+
+        .cat {
+            position: absolute;
+            transform: scale(0.6);
+            height: 1080px;
+            width: 1080px;
+            top: 1430px;
+            left: -500px;
+            background-repeat: no-repeat;
+            background-image: url("./static/imgs/catleft_ani.png");
+        }
+
+        
+        /* 旋转动画 */
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .titleleft {
+            position: absolute;
+            top: 1150px;
+            left: -50px;
+            transform: rotate(-90deg);
+            text-align: center;
+            font-size: 30px;
+            color: #115596;
+            z-index: 10;
+            font-weight: bold;
+            font-family: Rubik-Black;
+        }
+
+        .hrstyle {
+            width: 300px;
+            height: 3px;
+            position: absolute;
+            background-color: #acb7c0;
+            border: none;
+            left: 25px;
+        }
+
+        .hrfix1 {
+            top: 1550px;
+        }
+
+        .hrfix2 {
+            top: 2000px;
+        }
+
+        .hrfix3 {
+            top: 2360px;
+        }
+
+        .hrfix4 {
+            top: 2610px;
+        }
+
+        .qg {
+            height: 300px;
+            width: 639px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .qg1 {
+            background-image: url(./static/imgs/器官1.png);
+            top: 2050px;
+            left: 16px;
+        }
+
+        .detail {
+            height: 100%;
+            float: left;
+        }
+
+        .choose {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: #115596;
+            float: left;
+            position: absolute;
+            top: 2011px;
+            cursor: pointer;
+        }
+
+        .choosefix1 {
+            height: 40px;
+            width: 44px;
+            background-color: #ffffff;
+            background-image: url(./static/imgs/选页图标选中时.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            left: 429px;
+            top: 1950px;
+            animation: rotate 10s linear infinite;
+        }
+
+        .choosefix2 {
+            top: 1950px;
+            left: 553px;
+        }
+
+        .choosefix3 {
+            top: 1950px;
+            left: 602px;
+        }
+
+        .arrow {
+            width: 100px;
+            height: 44px;
+            background-image: url(./static/imgs/箭头.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 1950px;
+            left: 461px;
+        }
+
+        .detailhr {
+            width: 80%;
+            height: 10px;
+            background-color: #115596;
+            position: absolute;
+            top: 2000px;
+            left: 370px;
+        }
+
+        .point {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 2150px;
+            left: 206px;
+            background-image: url(./static/imgs/扩散1-1.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: translate(-50%, -50%);
+            animation: bowen1 1.5s linear infinite;
+            animation-delay: 0.4s;
+            display: block;
+        }
+
+        .point2 {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 2150px;
+            left: 206px;
+            background-image: url(./static/imgs/扩散1-1.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: translate(-50%, -50%);
+            animation: bowen1 1.5s linear infinite;
+            animation-delay: 0.4s;
+            display: none;
+        }
+
+
+        /* 扩散动画 点*/
+        @keyframes bowen1 {
+            0% {
+                opacity: 1;
+                width: 40px;
+                height: 32px;
+            }
+
+            100% {
+                opacity: 0.1;
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .qg1ani {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 2150px;
+            left: 206px;
+            background-color: #176dbd;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: bowen 1.5s linear infinite;
+            animation-delay: 0.4s;
+            z-index: 1;
+            display: block;
+        }
+
+        /* 扩散动画 图片 */
+        @keyframes bowen {
+            0% {
+            }
+
+            20% {
+                opacity: 1;
+                width: 40px;
+                height: 40px;
+            }
+
+            100% {
+                opacity: 0.1;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .qg2ani {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 2150px;
+            left: 223px;
+            background-color: #176dbd;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: bowen 1.5s linear infinite;
+            animation-delay: 0.4s;
+            z-index: 1;
+            display: none;
+        }
+
+        .pointfix2 {
+            /*top: 2419px;*/
+            top: 2150px;
+            left: 223px;
+        }
+
+        .xz {
+            width: 133px;
+            height: 89px;
+            background-image: url(./static/imgs/扩散3-2.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 2150px;
+            left: 152px;
+            display: none;
+            z-index: 5;
+        }
+
+        .qg3ani {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 2150px;
+            left: 223px;
+            background-color: #176dbd;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: bowen2 1.5s linear infinite;
+            animation-delay: 0.4s;
+            z-index: 0;
+            display: none;
+        }
+
+        @keyframes bowen2 {
+            0% {
+            }
+
+            20% {
+                opacity: 1;
+                width: 70px;
+                height: 70px;
+            }
+
+            100% {
+                opacity: 0.1;
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+
+        .topback {
+            width: 100%;
+            height: 920px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-color: #115596;
+            z-index: 0;
+        }
+
+        .DNAani{
+            opacity: 0.5;
+            width: 100%;
+            height: 920px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            z-index: 0;
+        }
+
+        .tittle {
+            width: 80%;
+            height:920px;
+            left: 0;
+            top: 0;
+            position: absolute;
+            font-size: 80px;
+            font-family: Rubik-black CN-Regular;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: #115596 0 10px 0;
+            padding: 300px 150px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* .titleTop {
+            width: 1920px;
+            height: 920px;
+            top: -50px;
+            position: absolute;
+            background-image: url("./static/imgs/topTitle.png");
+            transform: scaleX(0.85);
+            z-index: 1;
+        } */
+
+        .cancertext{
+            font-family:CN-Regular ;
+            color: #115596;
+            font-size: 30px;
+            /* letter-spacing: 1.5px; */
+            word-spacing: 8px;
+            line-height: 1.5;
+        }
+       
+
+        .navbox li {
+            width: 240px;
+            height: 60px;
+            background-color: #ffffff;
+            border-radius: 66px;
+            margin: 25px auto;
+            text-align: center;
+            line-height: 57px;
+            font-size: 25px;
+            color: #333333;
+            font-weight: bolder;
+            float: none;
+            cursor: pointer;
+        }
+
+        .navbox li:hover {
+            font-size: 28px;
+        }
+
+        .navbox li:first-child {
+            background-color: #115596;
+            color: #ffffff;
+        }
+
+        /* 导航栏遮罩 */
+        .cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9;
+            display: none;
+        }
+
+
+        .Tag li:first-child {
+            background-color: #ffffff;
+            color: black;
+        }
+
+        .Tag {
+            position: fixed;
+            z-index: 10;
+            top: -30px;
+            left: 1150px;
+            width: 380px;
+            height: 60px;
+            border-radius: 33px;
+            margin: 25px auto;
+            text-align: center;
+            line-height: 57px;
+            font-size: 20px;
+            color: #333333;
+            font-weight: bolder;
+            float: none;
+            cursor: pointer;
+            display: none;
+        }
+
+        .Tag li {
+            width: 380px;
+            height: 60px;
+            border-radius: 33px;
+            background-color: #ffffff;
+            margin: 25px auto;
+            text-align: center;
+            line-height: 57px;
+            font-size: 20px;
+            color: black;
+            /*font-weight: bolder;*/
+            float: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .Tag li a {
+            color: black;
+        }
+
+
+        .Tag li:hover {
+            font-size: 28px;
+            border: #176dbd;
+        }
+
+
+        /* footer_css */
+        .footerbox {
+            margin-top:200px;
+            height: 250px;
+            width: 100%;
+            background-color: #115596;
+            border-radius: 50px 50px 1px 1px;
+        }
+
+        .contacttext {
+            font-weight: bolder;
+            font-size: 30px;
+            color: #ffffff;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .logo {
+            width: 1000px;
+            height: 25px;
+            margin: 60px auto;
+        }
+
+        .logobox {
+            width: 80px;
+            margin-left: 160px;
+        }
+
+        .logoall {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: translate(-50%, -50%);
+            float: left;
+        }
+
+        .logoall:hover {
+            width: 70px;
+            height: 70px;
+        }
+
+        .weibologo {
+            background-image: url(./static/imgs/weibologo.jfif);
+        }
+
+        .bilibililogo {
+            background-image: url(./static/imgs/bilibililogo.png);
+        }
+
+        .githublogo {
+            background-image: url(./static/imgs/githublogo.png);
+        }
+
+        .schoollogo {
+            background-image: url(./static/imgs/schoollogo.png);
+        }
+
+        .logotext {
+            font-size: 18px;
+            /* width: 1000px; */
+            height: 35px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: -40px auto;
+        }
+        /* footer_css */   
+    </style>
+</head>
+
+<body>
+
+<header class="firstbox">
+    <div id="cover" class="cover"></div>
+    <div class="topback ">
+        <img class="DNAani" src="./static/imgs/topDNA_ani.gif" alt="">
+        <div class="tittle"> Convenient and readable equipment </br> for </br> multiple cansers detectoin</div>
+    </div>
+    <!-- 图片topTitle -->
+    <!-- <div class="titleTop"></div> -->
+    <div class="moreImg" style="position: absolute; top: 100px;z-index: 0">
+    </div>
+    <div id="nav" class="nav"></div>
+
+    <!-- 导航栏 -->
+    <div id="navbox" class="navbox">
+        <ul id="navul">
+            <li class="naval" id="project" onmouseenter="show(this.id,true);"
+                onmouseleave="show('project',false)">Project
+            </li>
+            <li class="naval" id="part" onmouseenter="show('part',true)" onmouseleave="show('part',false)"> Safety</li>
+            <li class="naval" id="model" onmouseenter="show('model',true)" onmouseleave="show('model',false)">Model
+            </li>
+            <li class="naval" id="human" onmouseenter="show('human',true)" onmouseleave="show('human',false)">Human
+                Practices
+            </li>
+            <li class="naval" id="team" onmouseenter="show('team',true)" onmouseleave="show('team',false)"> Team</li>
+            <li class="naval" id="award" onmouseenter="show('award',true)" onmouseleave="show('award',false)">Award
+            </li>
+        </ul>
+        <div id="projectTag" class="Tag">
+            <!-- <li><a href="https://2022.igem.wiki/CPU_CHINA/ description">Description</a></li> -->
+            <li><a href="./description.html">Description</a></li>
+            <li><a href="./design.html">Design</a></li>
+            <li><a href="https://2022.igem.wiki/CPU_CHINA/proof- of-concept">Proof of Concept</a></li>
+            <li><a href="https://2022.igem.wiki/CPU_CHINA/ engineering">Engineering Success</a></li>
+            <li><a href="#">Parts</a></li>
+            <li><a href="./hardware.html">Hardware</a></li>
+        </div>
+        <div id="partTag" class="Tag">
+            <a href="#"></a>
+        </div>
+        <div id="modelTag" class="Tag">
+            <!-- <a href="https://2022.igem.wiki/CPU_CHINA/model"></a> -->
+            <a href="./model.html"></a>
+        </div>
+        <div id="humanTag" class="Tag">
+            <li><a href="https://2022.igem.wiki/CPU_CHINA/ implementation">Proposed Implementation</a></li>
+            <li><a href="https://2022.igem.wiki/CPU_CHINA/human- practices">Integrated Human Practices</a></li>
+            <!-- <li><a href="https://2022.igem.wiki/CPU_CHINA/ communication">Education and Communication</a></li> -->
+            <li><a href="./education.html">Education and Communication</a></li>
+            <li><a href="https://2022.igem.wiki/CPU_CHINA/ contribution">Contribution</a></li>
+        </div>
+        <div id="teamTag" class="Tag">
+            <li><a href="#">Members</a></li>
+            <li><a href="https://2022.igem.wiki/CPU_CHINA/ attributions">Attributions</a></li>
+            <li><a href="https://2022.igem.wiki/CPU_CHINA/ partnership">Partnership</a></li>
+            <!-- <li><a href="https://2022.igem.wiki/CPU_CHINA/ collaborations">Collaborations</a></li> -->
+
+            <li><a href="./collaborations.html">Collaborations</a></li>
+        </div>
+        <div id="awardTag" class="Tag">
+            <a href="#"></a>
+        </div>
+    </div>
+</header>
+
+<div class="content">
+    <!-- 侧边栏 -->
+    <aside class="side">
+        <div class="DNApng"></div>
+        <div class="titleleft">Convenient and readable equipment <br/>for<br/>multiple cancers detection</div>
+        <div class="leftLine"></div>
+        <div class="circular"></div>
+        <div class="circular_white"></div>
+        <div class="arrow_left"></div>
+        <div class="circular2"></div>
+        <div class="circular_white2"></div>
+        <div class="cat"></div>
+        <hr class="hrstyle hrfix1"/>
+        <hr class="hrstyle hrfix2"/>
+        <!-- 器官  -->
+        <div id="img" class="qg qg1"></div>
+        <!--        <div class="qg qg1"></div>
+                <hr class="hrstyle hrfix3"/>
+                <div class="qg qg2"></div>
+                <hr class="hrstyle hrfix4"/>
+                <div class="qg qg3"></div>-->
+        <!-- 器官扩散动画 -->
+        <div id="point" class="point"></div>
+        <div id="qg1ani" class="qg1ani"></div>
+        <div id="point2" class="point2 pointfix2"></div>
+        <div id="qg2ani" class="qg2ani"></div>
+        <div id="xz" class="xz"></div>
+        <div id="qg3ani" class="qg3ani"></div>
+    </aside>
+    <div>
+        <article class="detail">
+            <ul>
+                <li onclick="choose1()" id="choose1" class="choose choosefix1"></li>
+                <li onclick="choose2()" id="choose2" class="choose choosefix2"></li>
+                <li onclick="choose3()" id="choose3" class="choose choosefix3"></li>
+                <div id="arrow" class="arrow"></div>
+            </ul>
+            <div id="text" style="position: absolute;top: 2150px;left: 430px;height: 300px;text-align: center;padding:0px 50px">
+                <p style="font-family: CN-Regular; font-size: 2em;text-align: left">
+                    <b id="content1" style="font-weight: bold;font-size:35px">Liver Cancer:</b>
+                    <b id="content2" class="cancertext" style="padding: 20px;">
+                        Liver cancer is one of the common cancers worldwide, accounting for 8.3% of the
+                        total number of deaths from cancer worldwide in 2020, 1and ranking third.
+                    </b>
+                </p>
+            </div>
+            <hr class="detailhr"/>
+        </article>
+    </div>
+</div>
+
+<footer class="footerbox">
+    <div class="contacttext">Contact us</div>
+    <ul class="logo">
+        <li class="logobox">
+            <a href="https://weibo.com/u/6054819039">
+                <div class="logoall weibologo"></div>
+            </a>
+        </li>
+        <li class="logobox">
+            <a href="https://space.bilibili.com/1453586595">
+                <div class="logoall bilibililogo"></div>
+            </a>
+        </li>
+        <li class="logobox">
+            <a href="https://github.com/cpu-igem/cpu-igem2021">
+                <div class="logoall githublogo"></div>
+            </a>
+        </li>
+        <li class="logobox" style="margin-left: 175px;">
+            <a href="https://international.cpu.edu.cn/">
+                <div class="logoall schoollogo"></div>
+            </a>
+        </li>
+    </ul>
+    <ul class="logotext" style="text-align: center">
+        <li style="margin-left: 500px;"><a href="https://weibo.com/u/6054819039">@CPU_CHINA2022</a></li>
+        <li style="margin-left: 110px;" class="ml"><a href="https://space.bilibili.com/1453586595">2022CPU_CHINA</a></li>
+        <li style="margin-left: 95px;" class="ml"><a href="https://github.com/cpu-igem/cpu-igem2022">Like our Website?</a></li>
+        <li style="margin-left: 60px;" class="ml"><a href="https://international.cpu.edu.cn/">International Communication</a></li>
+    </ul>
+</footer>
+
+</body>
+<script>
+    function choose1() {
+        let text = document.getElementById("text")
+        text.style.top = "2150px";
+        let font1 = document.getElementById("content1");
+        let font2 = document.getElementById("content2");
+        let content1 = "Liver Cancer:";
+        let content2 = "Liver cancer is one of the common cancers worldwide, accounting for 8.3% of the " +
+            "total number of deaths from cancer worldwide in 2020, 1and ranking third. ";
+        font1.innerText = content1;
+        font2.innerText = content2;
+        let img = document.getElementById("img");
+        img.style.background = "url('./static/imgs/器官1.png')";
+        img.style.left = "-60px";
+        img.style.top = "2000px";
+        var choose1 = document.getElementById("choose1");
+        var choose2 = document.getElementById("choose2");
+        var choose3 = document.getElementById("choose3");
+        var arrow = document.getElementById("arrow");
+        var point = document.getElementById("point");
+        var qg1ani = document.getElementById("qg1ani");
+        var point2 = document.getElementById("point2");
+        var qg2ani = document.getElementById("qg2ani");
+        var xz = document.getElementById("xz");
+        var qg3ani = document.getElementById("qg3ani");
+        choose2.style.cssText = "left: 553px;top: 1950px;";
+        choose3.style.cssText = "left: 602px;top: 1950px;";
+        arrow.style.cssText = "left: 461px;";
+        choose1.style.cssText = "height: 40px;width: 44px;background-color: #ffffff;background-image: url(./static/imgs/选页图标选中时.png);background-repeat: no-repeat;background-size: 100% 100%;left: 429px;top: 1950px;animation: rotate 10s linear infinite;";
+        point.style.display = "block"
+        qg1ani.style.display = "block"
+        point2.style.display = "none"
+        qg2ani.style.display = "none"
+        xz.style.display = "none"
+        qg3ani.style.display = "none"
+    }
+
+    function choose2() {
+        let text = document.getElementById("text")
+        text.style.top = "2150px"
+
+        let img = document.getElementById("img");
+        img.style.background = "url('./static/imgs/器官2.png')";
+        /*        img.style.backgroundSize = "70%"*/
+        /*img.style.height = "160px"
+        img.style.width = "200px"*/
+        img.style.left = "-60px";
+        img.style.top = "2050px"
+        let font1 = document.getElementById("content1");
+        let font2 = document.getElementById("content2");
+        let content1 = "Lung Adenocarcinoma: ";
+        let content2 = "Lung adenocarcinoma, a type of lung cancer, accounts for approximately " +
+            "40% of primary tumors of the lung. In 2020, lung cancer accounts for 18% of all deaths from cancer " +
+            "worldwide, ranking first,1 and in China, the incidence and mortality rate of lung cancer are both " +
+            "first. ";
+        font1.innerText = content1;
+        font2.innerText = content2;
+        var choose1 = document.getElementById("choose1");
+        var choose2 = document.getElementById("choose2");
+        var choose3 = document.getElementById("choose3");
+        var arrow = document.getElementById("arrow");
+        var point = document.getElementById("point");
+        var qg1ani = document.getElementById("qg1ani");
+        var point2 = document.getElementById("point2");
+        var qg2ani = document.getElementById("qg2ani");
+        var xz = document.getElementById("xz");
+        var qg3ani = document.getElementById("qg3ani");
+
+        choose1.setAttribute("class", "choose")
+        choose3.setAttribute("class", "choose")
+        choose1.style.cssText = "left: 429px;top: 1950px;";
+        choose3.style.cssText = "left: 602px;top: 1950px;";
+        arrow.style.cssText = "left: 508px";
+        choose2.style.cssText = "height: 40px;width: 44px;background-color: #ffffff;background-image: url(./static/imgs/选页图标选中时.png);background-repeat: no-repeat;background-size: 100% 100%;left: 476px;top: 1950px;animation: rotate 10s linear infinite;";
+        point.style.display = "none"
+        qg1ani.style.display = "none"
+        point2.style.display = "block"
+        qg2ani.style.display = "block"
+        xz.style.display = "none"
+        qg3ani.style.display = "none"
+    }
+
+    function choose3() {
+        let text = document.getElementById("text")
+        text.style.top = "2150px"
+        let img = document.getElementById("img");
+        img.style.background = "url('./static/imgs/器官3.png')";
+        img.style.top = "2050px"
+        img.style.left = "-50px"
+        img.style.transform = "scale(0.85)"
+        let font1 = document.getElementById("content1");
+        let font2 = document.getElementById("content2");
+        let content1 = "Pancreatic cancer：";
+        let content2 = "Pancreatic cancer is not easy to detect and has a low survival rate, it is known as the \"king of cancers\".<sup>1</sup>In 2020, pancreatic cancer accounts for 4.7% of all cancer deaths worldwide.<sup>2</sup>";
+        font1.innerText = content1;
+        font2.innerHTML = content2;
+        var choose1 = document.getElementById("choose1");
+        var choose2 = document.getElementById("choose2");
+        var choose3 = document.getElementById("choose3");
+        var arrow = document.getElementById("arrow");
+        var point = document.getElementById("point");
+        var qg1ani = document.getElementById("qg1ani");
+        var point2 = document.getElementById("point2");
+        var qg2ani = document.getElementById("qg2ani");
+        var xz = document.getElementById("xz");
+        var qg3ani = document.getElementById("qg3ani");
+        //修改
+        xz.style.top = "2090px"
+        xz.style.left = "160px"
+        qg3ani.style.top = "2130px"
+
+        choose1.setAttribute("class", "choose")
+        choose2.setAttribute("class", "choose")
+        choose1.style.cssText = "left: 429px;top: 1950px;";
+        choose2.style.cssText = "left: 476px;top: 1950px;";
+        arrow.style.cssText = "left: 555px";
+        choose3.style.cssText = "height: 40px;width: 44px;background-color: #ffffff;background-image: url(./static/imgs/选页图标选中时.png);background-repeat: no-repeat;background-size: 100% 100%;left: 521px;top: 1950px;animation: rotate 10s linear infinite;";
+        point.style.display = "none"
+        qg1ani.style.display = "none"
+        point2.style.display = "none"
+        qg2ani.style.display = "none"
+        xz.style.display = "block"
+        qg3ani.style.display = "block"
+    }
+
+    // 菜单栏显示
+    var nav = document.getElementById("nav");
+    var navbox = document.getElementById("navbox");
+    var navul = document.getElementById("navul");
+    var cover = document.getElementById("cover");
+    nav.onmouseenter = function () {
+        navbox.style.display = "block"
+        cover.style.display = "block"
+    }
+    
+    navbox.onmouseleave = function () {
+        navbox.style.display = "none"
+        cover.style.display = "none"
+    }
+
+
+</script>
+<script>
+    document.addEventListener('scroll', function () {
+        //页面卷去高度 + 浏览器可视窗口的高度 >= 整个页面的高度
+        if (window.pageYOffset + window.innerHeight + 250 >= document.body.offsetHeight) {
+            choose1()
+        }
+        if (window.pageYOffset + window.innerHeight + 200 >= document.body.offsetHeight) {
+            choose2()
+        }
+        if (window.pageYOffset + window.innerHeight + 100 >= document.body.offsetHeight) {
+            choose3()
+        }
+    })
+</script>
+<script type="text/javascript" src="./static/js/main.js">
+
+</script>
+</html>
