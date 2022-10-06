@@ -1,0 +1,74 @@
+
+/* footer_css */
+.footer_a {
+    font-family: SOURCESANSPRO-REGULAR;
+    font-size:0.8rem;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.footer_li {
+    list-style: none;
+    float: left;
+}
+
+.footerbox {
+    margin-top:200px;
+    height: 300px;
+    width: 100%;
+    background-color: #115596;
+    border-radius: 50px 50px 1px 1px;
+}
+
+.contacttext {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.logo {
+    width: 1000px;
+    height: 25px;
+    margin: 60px auto;
+}
+
+.logobox {
+    width: 80px;
+    margin-left: 160px;
+}
+
+.logoall {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: translate(-50%, -50%);
+    float: left;
+}
+
+.logoall:hover {
+    width: 90px;
+    height: 90px;
+}
+
+.weibologo {
+    background-image: url(../imgs/weibologo.jfif);
+}
+
+.bilibililogo {
+    background-image: url(../imgs/bilibililogo.png);
+}
+
+.githublogo {
+    background-image: url(../imgs/gitlablogo.png);
+}
+
+.schoollogo {
+    background-image: url(../imgs/schoollogo.png);
+}

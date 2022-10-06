@@ -1,0 +1,39 @@
+@font-face {
+    font-family: CN-Regular;
+    src: url('../fonts/CN-Regular.otf') format("opentype");
+}
+
+.CN-Regular {
+    font-family: CN-Regular;
+    font-size: 4.2em;
+}
+
+@font-face {
+    font-family: Rubik-Black;
+    src: url('../fonts/Rubik-Black.ttf') format("truetype");
+}
+
+.Rubik-Black{
+    font-family: Rubik-Black;
+    font-size: 4.2em;
+}
+
+@font-face {
+    font-family: SOURCESANSPRO-REGULAR;
+    src: url('./SOURCESANSPRO-REGULAR.OTF') format("opentype");
+}
+
+.SOURCESANSPRO-REGULAR{
+    font-family: SOURCESANSPRO-REGULAR;
+    font-size: 4.2em;
+}
+
+@font-face {
+    font-family: Source-Sans-Pro-Bold;
+    src: url('../fonts/Source-Sans-Pro-Bold.ttf') format("truetype");
+}
+
+.Source-Sans-Pro-Bold{
+    font-family: Source-Sans-Pro-Bold;
+    font-size: 4.2em;
+}

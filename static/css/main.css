@@ -1,0 +1,420 @@
+.main {
+    width: 100%;
+    display: flex;
+    height: 1rem;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: SR;
+    src: url("../fonts/SOURCESANSPRO-REGULAR.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Rubik-Black';
+    src: url(../fonts/Rubik-Black.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SSPB';
+    src: url(../fonts/Source-Sans-Pro-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.top {
+    position: fixed;
+    top: -5%;
+    z-index: -1;
+    width: 100%;
+}
+
+.cat {
+    width: 100%;
+    top: 15%;
+}
+
+.CBody {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    background-color: white;
+}
+
+.DBody {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    right: 0px;
+    background-color: white;
+}
+
+.content {
+    width: 23%;
+    min-width: 100px;
+    height: 250px;
+    margin-bottom: 35px;
+    background-color: white;
+    padding-left: 5%;
+}
+
+.content > section {
+    position: relative;
+}
+
+.content > section > img {
+    width: 80%;
+    height: 80%;
+}
+
+.content > section > span {
+    position: absolute;
+    left: 20%;
+    top: 100%;
+    font-size: 0.2rem;
+}
+
+.content > section > b {
+    display: none;
+    position: absolute;
+    font-size: 0.3rem;
+    margin-left: 22%;
+    top: 30%;
+}
+
+.sectionLeft {
+    margin-left: 5%;
+    display: flex;
+    width: 50%;
+    background-color: white;
+}
+
+/**
+    布局限制
+ */
+@media screen and(min-width: 960px ) {
+
+}
+
+@media screen and (max-width: 960px) and (min-width: 750px) {
+
+}
+
+.sectionLeftCard {
+    display: flex;
+    margin: 5%;
+    width: 30%;
+    height: 30%;
+}
+
+.user_inf {
+    position: relative;
+    display: none;
+    color: blue;
+    font-family: Rubik-Black;
+    font-size: 0.2rem;
+    z-index: 2;
+    left: -1.2rem;
+    top: 0.7rem;
+}
+
+.ImgHover {
+
+}
+
+.ImgHover:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    background: #acb7c0;
+    z-index: 1;
+}
+
+.sectionLeftCardImg {
+    transition-duration: 0.5s;
+    display: flex;
+    padding: 2%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.sectionR {
+    display: block;
+    position: relative;
+    min-width: 560px;
+    width: 50%;
+    height: 60%;
+    right: -60%;
+}
+
+.sectionLeftCardImg:hover {
+    background: #003333;
+    -webkit-box-shadow: #ccc 0px 10px 10px;
+    -moz-box-shadow: #ccc 0px 10px 10px;
+    box-shadow: #ccc 0px 10px 10px;
+}
+
+.sectionRight {
+    position: absolute;
+   /*  position: fixed; */
+    flex-direction: column;
+    width: 34%;
+    height: 60%;
+    right: 80%;
+    top: -850px;
+    /*animation: anim 1s linear infinite;*/
+    /*animation-iteration-count: 1*/
+}
+
+@keyframes out {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(275);
+    }
+
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+        transform: translateX(275px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.sectionRight > section > div {
+    display: flex;
+    width: 120%;
+    height: 120%;
+    min-width: 160px;
+}
+
+.sectionRight > section > span {
+    font-family: SR;
+    position: absolute;
+    left: 5%;
+    top: 540px;
+    font-size: 0.2rem;
+}
+
+.sectionRightDetail > div {
+    position: absolute;
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+}
+
+.sectionRightDetail > div > img {
+    position: absolute;
+    top: -880px;
+    left: 60px;
+    width: 350px;
+    height: 320px;
+}
+
+.sectionRight > section > p {
+    font-family: SSPB;
+    position: absolute;
+    left: 15%;
+    top: 650px;
+    font-size: 0.2rem;
+}
+
+.sectionRight > b {
+    position: absolute;
+    font-family: Rubik-Black;
+    font-size: 0.3rem;
+    top: 480px;
+    left: 40%;
+}
+
+.sectionRight:hover {
+
+}
+
+.SRD {
+    font-family: SSPB;
+}
+
+.sectionRightTitle {
+    font-size: 0.2rem;
+    text-align: center;
+    border-bottom: 2px solid black;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+
+.sectionRightImg {
+    display: flex;
+    width: 80%;
+    height: 30%;
+    margin-left: 10%;
+    margin-top: -7rem;
+    background-color: red;
+}
+
+.sectionRightIcon {
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 10%;
+}
+
+.sectionImg {
+    display: flex;
+}
+
+.sectionRightName {
+    font-family: Rubik-Black;
+    position: absolute;
+    font-size: 0.3rem;
+    top: 4.2rem;
+    left: 5%;
+    margin-left: 0.5rem;
+    width: 3rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.sectionRightDetail {
+    font-family: SSPB;
+    margin-top: 0.2rem;
+    font-size: 0.3rem;
+    width: 80%;
+    height: 35%;
+    top: 10%;
+    margin-left: 10%;
+}
+
+
+
+
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+}
+
+.navTable {
+    position: fixed;
+    width: 20%;
+    height: 6rem;
+    left: 60%;
+    right: 20%;
+    display: none;
+    font-size: 0.2rem;
+    font-weight: bolder;
+    z-index: 16;
+}
+
+.navLink {
+    position: fixed;
+    left: 30%;
+    width: 20%;
+    height: 6rem;
+    display: flex;
+}
+
+.tableRight {
+    position: fixed;
+    z-index: 16;
+    right: 30%;
+    width: 10%;
+    height: 50%;
+    /*background-color: red;*/
+    display: none;
+}
+
+.nav {
+    width: 0.2rem;
+    height: 0.2rem;
+    position: fixed;
+    top: 5%;
+    left: 85%;
+    z-index: 10;
+}
+
+footer {
+    /*background-color: white;*/
+    background-color: #115596;
+    border-radius: 80px 80px 1px 1px;
+    min-width: 300px;
+}
+
+.footerHeader {
+    left: 100%;
+    text-align: center;
+    /*margin: 0.2rem;*/
+    font-size: 0.4rem;
+    font-weight: bolder;
+    color: white;
+    width: 100%;
+    height: 1rem;
+}
+
+.footerBody {
+    display: flex;
+    text-align: center;
+}
+
+.footerBox {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.3rem;
+}
+
+.footerImg {
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+}
+
+footer > section {
+    display: flex;
+    text-align: center;
+
+}
+
+footer > section > section {
+    position: relative;
+    width: 23%;
+    left: 20%;
+    padding-right: 5%;
+    min-width: 40px;
+    text-align: center;
+}
+
+footer > section > section > span {
+    color:aliceblue;
+    position: absolute;
+    top: 55%;
+    left: -65%;
+    margin-left: 20%;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    font-size: 0.2rem;
+   
+}
