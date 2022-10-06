@@ -126,6 +126,7 @@ section {
 }
 
 .paragraph{
+    text-align:justify;
     /* text-indent: 5%; */
     margin:25px 0px;
     font-family:SOURCESANSPRO-REGULAR;
