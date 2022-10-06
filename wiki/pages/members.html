@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+                minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>members</title>
+    <link rel="stylesheet" href="../../static/css/main.css" type="text/css">
+    <link rel="stylesheet" href="../../static/css/footer.css" type="text/css">
+    <script type="text/javascript" src="../../static/js/html5.js"></script>
+    <script type="text/javascript" src="../../static/js/main.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: rgb(4, 116, 187);
+        }
+
+        h2 {
+            color: rgb(4, 116, 187)
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-top: 0.1rem;
+            padding-top: 0.1rem;
+            text-align: center;
+            background-color: white;
+            color: black;
+            /*width: 2rem;*/
+            /*height: 0.33rem;*/
+            width: 2.5rem;
+            height: 0.5rem;
+            border-radius: 0.2rem;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .Tag {
+        }
+
+        .miao {
+           display: none
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="cover" id="cover">
+</div>
+
+<div class="nav" id="nav">
+    <img src="../../static/imgs/cat_navigation.png" alt="">
+</div>
+<div class="navTable" id="navTable">
+    <div class="tableRight" id="navRight">
+        <ul id="navRightUl">
+            <li class="naval" id="project" onmouseenter="show(this.id,true);"
+                onmouseleave="show('project',false)">Project
+            </li>
+            <li class="naval" id="part" onmouseenter="show('part',true)" onmouseleave="show('part',false)"> Safety
+            </li>
+            <li class="naval" id="model" onmouseenter="show('model',true)" onmouseleave="show('model',false)">Model
+            </li>
+            <li class="naval" id="human" onmouseenter="show('human',true)" onmouseleave="show('human',false)">Human
+                Practices
+            </li>
+            <li class="naval" id="team" onmouseenter="show('team',true)" onmouseleave="show('team',false)"> Team
+            </li>
+            <li class="naval" id="award" onmouseenter="show('award',true)" onmouseleave="show('award',false)">Award
+            </li>
+        </ul>
+    </div>
+    <div class="navLink">
+        <div id="projectTag" class="Tag">
+            <ul>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/ description">Description</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/proof- of-concept">Proof of Concept</a></li>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/ engineering">Engineering Success</a></li>
+                <li><a href="#">Parts</a></li>
+                <li><a href="#">Experiment</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navLink">
+        <div id="partTag" class="Tag">
+            <a href="#"></a>
+        </div>
+    </div>
+    <div class="navLink">
+        <div id="modelTag" class="Tag">
+            <a href="https://2022.igem.wiki/CPU_CHINA/model"></a>
+        </div>
+    </div>
+    <div class="navLink">
+        <div id="humanTag" class="Tag">
+            <ul>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/ implementation">Proposed Implementation</a></li>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/human- practices">Integrated Human Practices</a></li>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/ communication">Education and Communication</a></li>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/ contribution">Contribution</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navLink">
+        <div id="teamTag" class="Tag">
+            <ul>
+                <li><a href="#">Members</a></li>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/ attributions">Attributions</a></li>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/ partnership">Partnership</a></li>
+                <li><a href="https://2022.igem.wiki/CPU_CHINA/ collaborations">Collaborations</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navLink">
+        <div id="awardTag" class="Tag">
+            <a href="#"></a>
+        </div>
+    </div>
+</div>
+<header>
+    <img class="top" id="top" src="../../static/imgs/COLLABORATIONS.png" alt="图片迷路了">
+    <img class="cat" id="cat" src="../../static/imgs/cat.png" alt="猫头迷路了">
+</header>
+<section style="background-color: white">
+    <section class="CBody">
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em1">
+            <section>
+                <img class="ImgHover" id="em1_img" src="../../static/imgs/member/刘云龙-头像.png" alt="这个图片迷路了">
+                <b id="em1_b">PI</b>
+                <span>刘云龙</span>
+            </section>
+            <span id="em1_name" class="miao">Yunlong Liu</span>
+            <span id="em1_describe" class="miao">The PI of team 2022 CPU_CHINA.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em12">
+            <section>
+                <img class="ImgHover" id="em12_img" src="../../static/imgs/member/黄宏怡-头像.png" alt="这个图片迷路了">
+                <b id="em12_b">队长</b>
+                <span>黄宏怡</span>
+            </section>
+            <span id="em12_name" class="miao">Hongyi Huang</span>
+            <span id="em12_describe" class="miao">Team leader and in charge of the wet lab experiment.
+                    Just do it.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em3">
+            <section>
+                <img class="ImgHover" id="em3_img" src="../../static/imgs/member/仲可可-头像.png" alt="这个图片迷路了">
+                <b id="em3_b">队长</b>
+                <span>仲可可</span>
+            </section>
+            <span id="em3_name" class="miao">ZhongKeke</span>
+            <span id="em3_describe"
+                  class="miao">The team leader responsible for team management and
+                    carrying out experiment.
+                    Only when you seize today,can you not lose tomorrow.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em14">
+            <section><span>
+                        石申薇
+                    </span>
+                <img class="ImgHover" id="em14_img" src="../../static/imgs/member/石申薇-头像.jpg" alt="这个图片迷路了">
+                <b id="em14_b">学术</b>
+            </section>
+            <span id="em14_name" class="miao">Shenwei Shi</span>
+            <span id="em14_describe"
+                  class="miao">I am mainly responsible for scheme design and experiment implementation.
+                    Better late than never.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em18">
+            <section><span>
+                        吴苡凡
+                    </span>
+                <img class="ImgHover" id="em18_img" src="../../static/imgs/member/吴苡凡-头像.jpg" alt="这个图片迷路了">
+                <b id="em18_b">学术</b>
+            </section>
+            <span id="em18_name" class="miao">Yifan Wu</span>
+            <span id="em18_describe"
+                  class="miao"> Little promoter of experiment. That man is eager to solve
+                    some problems,but it always backfires.
+                    Never rely on fairy emperors.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em17">
+            <section>
+                <span>李佳睿</span>
+                <img class="ImgHover" id="em17_img" src="../../static/imgs/member/李佳睿-头像.png" alt="这个图片迷路了">
+                <b id="em17_b">学术</b>
+            </section>
+            <span id="em17_name" class="miao">Jiarui Li</span>
+            <span id="em17_describe" class="miao">Doing experiments all day and writing wiki all night.
+                    All your wildest dreams will come true.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em16">
+            <section><span>
+                        章珺
+                    </span>
+                <img class="ImgHover" id="em16_img" src="../../static/imgs/member/章珺-头像（已修图）.jpg"
+                     alt="这个图片迷路了">
+                <b id="em16_b">学术</b>
+            </section>
+            <span id="em16_name" class="miao">Jun Zhang</span>
+            <span id="em16_describe"
+                  class="miao">Academic member responsible for the design and
+                    experiment the project
+                    All your efforts will pay off!</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em15">
+            <section><span>
+                        张一东
+                    </span>
+                <img class="ImgHover" id="em15_img" src="../../static/imgs/member/张一东-头像.jpg" alt="这个图片迷路了">
+                <b id="em15_b">学术</b>
+            </section>
+            <span id="em15_name" class="miao">YiDong Zhang</span>
+            <span id="em15_describe" class="miao">Hardware Development
+                    I resist working hard, but insist on hardly working.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em20">
+            <section><span>
+                        史鸿路
+                    </span>
+                <img class="ImgHover" id="em20_img" src="../../static/imgs/member/史鸿路-头像（已修图）.jpg"
+                     alt="这个图片迷路了">
+                <b id="em20_b">数模</b>
+            </section>
+            <span id="em20_name" class="miao">Honglu Shi</span>
+            <span id="em20_describe" class="miao">I am responsible for the dynamics modeling part
+                    of the project.
+                    One false step will make a great difference.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em21">
+            <section><span>
+                        余其奕
+                    </span>
+                <img class="ImgHover" id="em21_img" src="../../static/imgs/member/余其奕-头像（已修图）.jpg"
+                     alt="这个图片迷路了">
+                <b id="em21_b">数模</b>
+            </section>
+            <span id="em21_name" class="miao">Qiyi Yu</span>
+            <span id="em21_describe" class="miao">The model designer for bioinformatics analysis.
+                    Time is a bird for ever on the wing.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em22">
+            <section><span>
+                        熊智柔
+                    </span>
+                <img class="ImgHover" id="em22_img" src="../../static/imgs/member/熊智柔-头像（已修图）.jpg"
+                     alt="这个图片迷路了">
+                <b id="em22_b">HP</b>
+            </section>
+            <span id="em22_name" class="miao">Zhirou Xiong</span>
+            <span id="em22_describe" class="miao">HP responsible for exploring social value for the project.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em23">
+            <section><span>
+                        鲁瑞
+                    </span>
+                <img class="ImgHover" id="em23_img" src="../../static/imgs/member/鲁瑞-头像（已修图）.jpg"
+                     alt="这个图片迷路了">
+                <b id="em23_b">HP</b>
+            </section>
+            <span id="em23_name" class="miao">Rui Lu</span>
+            <span id="em23_describe"
+                  class="miao">responsible for organizing various activities and
+                    popularizing science.
+                    Keep online all the time.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em24">
+            <section><span>
+                        凌锐洋
+                    </span>
+                <img class="ImgHover" id="em24_img" src="../../static/imgs/member/凌锐洋-头像（已修图）.jpg"
+                     alt="这个图片迷路了">
+                <b id="em24_b">美工</b>
+            </section>
+            <span id="em24_name" class="miao">Ruiyang Ling</span>
+            <span id="em24_describe" class="miao">The art designer responsible for typesetting and video
+                    production.
+                    Format error is my lifelong enemy!</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em25">
+            <section><span>
+                        张卓珺
+                    </span>
+                <img class="ImgHover" id="em25_img" src="../../static/imgs/member/张卓珺-头像（已修图）.png"
+                     alt="这个图片迷路了">
+                <b id="em25_b">美工</b>
+            </section>
+            <span id="em25_name" class="miao">Zhuojun Zhang</span>
+            <span id="em25_describe" class="miao">The art designer responsible for wiki design and poster
+                    ʕ •ᴥ•ʔ</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em26">
+            <section><span>
+                        莫鸿仪
+                    </span>
+                <img class="ImgHover" id="em26_img" src="../../static/imgs/member/莫鸿仪-头像.jpg" alt="这个图片迷路了">
+                <b id="em26_b">美工</b>
+            </section>
+            <span id="em26_name" class="miao">Hongyi Mo</span>
+            <span id="em26_describe" class="miao">Wiki Production
+                    Up Up</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em27">
+            <section><span>
+                        马如意
+                    </span>
+                <img class="ImgHover" id="em27_img" src="../../static/imgs/member/马如意-头像2（已修图）用这个.jpg"
+                     alt="这个图片迷路了">
+                <b id="em27_b">Instructor</b>
+            </section>
+            <span id="em27_name" class="miao">Ruyi Ma</span>
+            <span id="em27_describe" class="miao">The instructor: Select team members and coach the team.
+                    There is a long way to go.</span>
+        </section>
+        <section class="content" onclick="change_user_detail(this.id)" onmouseenter="showUserDetail(this.id,true)"
+                 onmouseleave="showUserDetail(this.id,false)" id="em28">
+            <section><span>
+                    罗鹏
+                </span>
+                <img class="ImgHover" id="em28_img" src="../../static/imgs/member/罗鹏-头像.png" alt="这个图片迷路了">
+                <b id="em28_b">Instructor</b>
+            </section>
+            <span id="em28_name" class="miao">Peng Luo</span>
+            <span id="em28_describe" class="miao">The instructor: Select team members and coach the team.
+                There is a crack in everything, that’s how the light gets in.</span>
+        </section>
+    </section>
+    <section class="sectionR" id="sectionR">
+        <section class="sectionRight">
+            <div>
+                <img src="../../static/imgs/user_background.png" alt="图片迷路了">
+            </div>
+            <br>
+            <b id="SRN">Name</b>
+            <section class="sectionRightDetail">
+                <div>
+                    <img id="img" src="../../static/imgs/bilibili.png" alt="图片迷路了">
+                </div>
+                <span id="SR">这是一些工作经历</span>
+                <p id="SRD">这是一些整活格言</p>
+            </section>
+        </section>
+    </section>
+</section>
+<footer>
+    <div class="footerHeader">
+        <b>Contact us</b>
+    </div>
+    <section>
+        <section class="footerBox">
+            <a href="https://weibo.com/u/6054819039">
+                <section class="footerImg">
+                    <img src="../../static/imgs/weibologo.jfif" alt="">
+                </section>
+                <br>
+            </a>
+            <span>@CPU_CHINA2022</span>
+        </section>
+        <section class="footerBox">
+            <a href="https://space.bilibili.com/1453586595">
+                <section class="footerImg">
+                    <img src="../../static/imgs/bilibililogo.png" alt="">
+                </section>
+                <br>
+            </a>
+            <span>2022CPU_CHINA</span>
+        </section>
+        <section class="footerBox">
+            <a href="https://github.com/cpu-igem/cpu-igem2021">
+                <section class="footerImg">
+                    <img src="../../static/imgs/githublogo.png" alt="">
+                </section>
+                <br>
+            </a>
+            <span>Like our Website?</span>
+        </section>
+        <section class="footerBox">
+            <a href="https://international.cpu.edu.cn/">
+                <section class="footerImg">
+                    <img src="../../static/imgs/schoollogo.png" alt="">
+                </section>
+                <br>
+            </a>
+            <span style="width:400px;margin-left:-40px">International Communication</span>
+        </section>
+    </section>
+</footer>
+</body>
+</html>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = "orientationchange" in window ? "orientationchange" : "resize",
+            recalc = function () {
+                if (docEl.clientWidth > 750) {
+                    docEl.style.fontSize = "100px";
+                    doc.getElementById("app").style.width = "750px";
+                } else {
+                    var width = docEl.clientWidth / 7.5;
+                    docEl.style.fontSize = width + "px";
+                    doc.getElementById("app").style.width = "auto";
+                }
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener("DOMContentLoaded", recalc, false);
+    })(document, window);
+    let cover = document.getElementById("cover")
+    let dpr = window.devicePixelRatio || 1
+    let nav = document.getElementById("nav")
+    let table = document.getElementById("navRight")
+    let navTable = document.getElementById("navTable")
+
+    if (dpr >= 2) {
+        nav.onmouseleave = function () {
+            cover.style.display = "none"
+        }
+        nav.onmouseenter = function () {
+            cover.style.display = "block"
+        }
+    } else {
+        nav.addEventListener("click", function () {
+            if (cover.style.display === "block") {
+                cover.style.display = "none"
+                table.style.display = 'none'
+                navTable.style.display = 'none'
+
+            } else {
+                cover.style.display = "block"
+                table.style.display = "block"
+                navTable.style.display = "block"
+            }
+        })
+    }
+    document.addEventListener('scroll', function () {
+        let cat = document.getElementById("cat")
+        let top = document.getElementById("top")
+        let cat_bottom = cat.getBoundingClientRect().bottom
+        let sectionR = document.getElementById("sectionR")
+        let section_R_bottom = sectionR.getBoundingClientRect().bottom
+        console.log(cat_bottom)
+        if (cat_bottom < 160) {
+            top.style.position = "absolute"
+            // sectionR.style.display = "none"
+        } else if (sectionR.style.display === "block" && cat_bottom > 500) {
+            top.style.position = "fixed"
+            // sectionR.style.display = "none"
+        } else {
+            top.style.position = "fixed"
+        }
+    })
+    let id = "em1"
+    let SRD = document.getElementById("SRD")
+    let SRN = document.getElementById("SRN")
+    let SR = document.getElementById("SR")
+    let image = document.getElementById(id + "_img")
+    let img_path = image.getAttribute("src")
+    let user_card_img = document.getElementById("img")
+    user_card_img.setAttribute("src", img_path)
+    SRD.innerText = "The PI of team 2022 CPU_CHINA."
+    SRN.innerText = "PI"
+    SR.innerText = "Yunlong Liu"
+
+</script>

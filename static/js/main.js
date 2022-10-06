@@ -8,6 +8,13 @@ function showUserDetail(id, flag) {
 }
 
 function change_user_detail(id) {
+    //职位信息
+    let zhiwei = document.getElementById(id + "_b")
+    //经历，这里给的是英文名
+    let name = document.getElementById(id + "_name")
+    //信息
+    let describe = document.getElementById(id + "_describe")
+
     let SRD = document.getElementById("SRD")
     let SRN = document.getElementById("SRN")
     let SR = document.getElementById("SR")
@@ -15,17 +22,9 @@ function change_user_detail(id) {
     let img_path = image.getAttribute("src")
     let user_card_img = document.getElementById("img")
     user_card_img.setAttribute("src", img_path)
-    if (id === "em1") {
-        SRD.innerText = "这是1的信息"
-        SRN.innerText = "职位1"
-        SR.innerText = "这是1的经历"
-    }
-    if (id === "em12") {
-        SRD.innerText = "这是2的信息"
-        SRN.innerText = "职位2"
-        SR.innerText = "这是2的经历"
-    }
-
+    SRN.innerText = zhiwei.innerText
+    SR.innerText = name.innerText
+    SRD.innerText = describe.innerText
 }
 
 function show(id, flag) {
