@@ -90,7 +90,6 @@ section {
 
 .sectionRight {
     box-shadow: 0.05rem 0.1rem 0.15rem 0.2rem #176dbd inset;
-    /* box-sizing: content-box; */
     font-size: 0.2rem;
     margin-left: 20rem;
     margin-right: 10rem;
@@ -100,12 +99,21 @@ section {
 
 .sectionRight img {
     width: 1100px;
-    /* height: 550px; */
+}
+
+.brat {
+    text-align: center;
+    font-family: SOURCESANSPRO-REGULAR;
+    color: #38393a;
+    font-size: 20px;
+    margin:10px 0;
+    font-weight:bolder;
 }
 
 .paragraph{
+    line-height: 1.6;
     text-align:justify;
-    /* text-indent: 5%; */
+   /*  text-indent: 5%; */
     margin:25px 0px;
     font-family:SOURCESANSPRO-REGULAR;
     font-size: 25px;
@@ -135,17 +143,6 @@ section {
     top: 0.8rem;
 }
 
-
-/* .tableRight {
-    position: fixed;
-    z-index: 16;
-    right: 30%;
-    width: 10%;
-    height: 50%;
-    background-color: red;
-    display: none;
-}
- */
 
 .sidetitle{
     font-family: Rubik-Black;
