@@ -88,18 +88,18 @@ section {
 }
 
 .sectionLeft {
-    box-shadow: 0.05rem 0.1rem 0.15rem 0.2rem #bebebe inset;
-    background-image: url();
+    /* box-shadow: 0.05rem 0.1rem 0.15rem 0.2rem #bebebe inset; */
+    background-image: url(../imgs/sectionleftkuang.png);
+    background-repeat: no-repeat;
     margin-left: 1.5rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
     padding-right: 1.5rem;
-    /* border-style: groove; */
     position: fixed;
     display: flex;
     top: 10rem;
     font-size: 0.5rem;
-    width: 12rem;
+    width: 14rem;
     height: 12rem;
 }
 
