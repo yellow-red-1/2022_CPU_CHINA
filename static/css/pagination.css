@@ -24,26 +24,6 @@ h3{
     font-size: 30px;
 }
 
-/* ul {
-    list-style: none;
-}
-
-li {
-    margin-top: 0.1rem;
-    padding-top: 0.1rem;
-    text-align: center;
-    background-color: white;
-    color: black;
-    width: 2.5rem;
-    height: 0.5rem;
-    border-radius: 0.2rem;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    text-align: center;
-} */
 
 header {
     display: flex;
@@ -58,13 +38,6 @@ section {
     background: white;
     z-index: -1;
 }
-
-/* footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #115596;
-    border-radius: 80px 80px 1px 1px;
-} */
 
 
 .main {
@@ -123,6 +96,11 @@ section {
     margin-right: 10rem;
     margin-bottom: 0.1rem;
     padding: 1rem 3rem;
+}
+
+.sectionRight img {
+    width: 1100px;
+    /* height: 550px; */
 }
 
 .paragraph{
