@@ -14,14 +14,15 @@ function change_user_detail(id) {
     let name = document.getElementById(id + "_name")
     //信息
     let describe = document.getElementById(id + "_describe")
-
+    //名片图片
+    let card = document.getElementById(id + "_card").innerText
     let SRD = document.getElementById("SRD")
     let SRN = document.getElementById("SRN")
     let SR = document.getElementById("SR")
-    let image = document.getElementById(id + "_img")
-    let img_path = image.getAttribute("src")
+//    let image = document.getElementById(id + "_img")
+//    let img_path = card.getAttribute("src")
     let user_card_img = document.getElementById("img")
-    user_card_img.setAttribute("src", img_path)
+    user_card_img.setAttribute("src", card)
     SRN.innerText = zhiwei.innerText
     SR.innerText = name.innerText
     SRD.innerText = describe.innerText
