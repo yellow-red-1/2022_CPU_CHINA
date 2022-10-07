@@ -12,6 +12,9 @@
     <link type="text/css" rel="stylesheet" href="../../static/css/navigation.css" charset="UTF-8"/>
     <script type="text/javascript" src="../../static/js/main.js"></script>
     <style type="text/css">
+        img {
+            transform: scale(0.8);
+        }
     </style>
 </head>
 
@@ -67,6 +70,7 @@
             <div class="sectionLeft" id="leftDNA" style="background-image: url(../../static/imgs/kuang_mid.png);">
                 <img src="../../static/imgs/DNA.png" id="dnaImg" alt="图片丢失">
                 <div class="" id="leftTitle">
+                    <!-- 左侧标题 -->
                     <p id="title1" class="sidetitle" style="white-space: nowrap;">The ssDNA cleavage activity of mutants</p><br><br>
                     <p id="title2" class="sidetitle" style="white-space: nowrap;">The trans-cleavage activity of mutants</p><br>
                     <p id="title3" class="sidetitle" style="white-space: nowrap;">Specificity for single-base difference</p><br>
@@ -79,102 +83,69 @@
             </div>
             <div class="sectionRight" id="content">
                 <h1>Result wet lab</h1>
-                <!-- 标题一 -->              
-                <h2>The ssDNA cleavage activity of mutants</h2>
-                <h3>Strains inoculation</h3>
-                <div class="paragraph">
-                    1. Turn on the ultra-clean table UV lamp for 30 min in advance, and set the shaker speed and temperature at 220rpm and 37 ℃.<br>
-                    2. Open the sterilized culture medium, add 50 μL of kanamycin stock solution (30 mg/mL) to the conical flask, and shake for a thorough mix. <br>
-                    3. Take 7 mL of LB culture medium to the test tube. <br>
-                    4. Add about 30 μL of -80 ℃ lyophilized monoclonal strain into the test tube with 7 mL of culture medium. <br>
-                    5. Put the test tube inside the shaker and set the parameter at 37 ℃, 220 rpm for an overnight incubation, which is about 12 hr. <br>
-                    6. Store the culture medium at 4 ℃. <br><br>
-                    100 mL LB medium formulation
-                </div>
-                <img src="../../static/imgs/method_wet_lab/Picture1.png" alt="">
-                <h3>Expanded culture</h3>
-                <div class="paragraph">
-                    1. Remove the test tube from the shaker and place it on the ultra-clean table. <br> 
-                    2. Take out the test tube containing the bacterial fluid and transfer 1-2 mL of it into a conical flask containing the sterilized TB culture medium. <br>
-                    3. Repeat the procedures with the other test tube and the conical flask. <br>
-                    4. Place the two conical flasks in the shaker and set the parameter at 37 ℃, 220 rpm incubation, about 3-4 h,OD=0.6. <br>
-                    5. Preserve the strain. <br><br>
-                    900 mL TB medium formulation 
-                </div>
-                <img src="../../static/imgs/method_wet_lab/Picture2.png" alt="">
-                <h3>IPTG induction</h3>
-                <div class="paragraph">
-                    1. Take out the conical flasks from the shaker and put them into the ultra-clean table together with IPTG. <br>
-                    2. Add 0.5nM IPTG under the surface of the culture medium and repeat the procedure. <br>
-                    3. Place the conical flasks back into the shaker and incubate at 16 ℃, 220 rpm for 16 h. <br>
-                </div>
-                <h3>Collection</h3>
-                <div class="paragraph">
-                    1. Centrifuge the bacterial fluid and discard the supernatant. <br>
-                    2. Add 5mL of 20mM imidazole respectively and mix well with blowing. Then transfer them to the same tube. <br>
-                    3. Add 200ul PMSF. <br>
-                    4. Preserve it at -80°C.<br>
+
+<!-- 正文 -->
+<h2> The ssDNA cleavage activity of mutants</h2>
+<div class="paragraph">
+&nbsp;&nbsp;&nbsp;&nbsp;Our team expressed Mut 3-6,of which only Mut-4 had single-stranded cleavage activity.When comparing Mut-1 and Mut-2,Mut1 had the better cleavage activity. Therefore,in the following steps we chose Mut-1 and Mut-4 to compare the cleavage activity with wild-type wtCasΦ. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;First, we verified the cleavage activity of the mutants with the ssDNA target. Single-strand DNA labelled with fluorescence at the end was incubated with different mutant proteins. The PAGE results are as shown in Figure 8. Under the catalysis of the three proteins, the target DNA was apparently cleavaged. From the preliminary results of PAGE, there was no significant difference between the mutant protein and the wild-type protein in the cleavage activity of the single-strand DNA target.
+</div>
+<img src="../../static/imgs/result_wet_lab/Picture1.png" alt="">                
+<div class="brat">
+    Figure 8. PAGE results for cleavage ssDNA target with different Cas-crRNA.
+    </div> 
+    <h2>The trans-cleavage activity of mutants</h2>
+    <div class="paragraph">
+        &nbsp;&nbsp;&nbsp;&nbsp;The fluorophore quencher (FQ) reporter assays were employed to evaluate the target-triggered trans-cleavage activity of wild-type CasΦ and mutants. The final reaction (20 μL) contained final concentrations of 100 nM CasΦ, 120nM crRNA, 100nM FQ probe, with 50 nM target DNA in cleavage buffer (10 mM HEPES-Na pH7.5, 150 mM KCl, 5 mM MgCl2, 10% glycerol, 0.5 mM TCEP). Fluorescence signals were obtained every 2 minutes at 37°C. The sequence of crRNA, activator ssDNA and FQ probe were listed in Table 2.
+    </div>
+    <div class="paragraph">    
+    Table 2. The sequence of crRNA, target DNA and FQ probe for FQ-reporter assays
+    </div>
+    <img src="../../static/imgs/result_wet_lab/Picture2.png" alt="">            
+    <div class="paragraph">
+        &nbsp;&nbsp;&nbsp;&nbsp;The results of the fluorescence analysis were shown in Figure 9. The activity of the Mut-1 and Mut-2 proteins which were designed by Doudna’s group, expressed and purified by our team, and its results were consistent with what were reported. And the four mutant proteins (Mut-3 to Mut -6) constructed by our team, in which Mut-4 has a high target triggered trans-cleavage activity compared to the wild-type. And it has comparable cleavage activity to the Mut-1 designed by Doudna's group. These results further verify the hypothesis that the helix α7 might regulate the accessibility of the RuvC domain for the association of single-stranded DNA (ssDNA).
+        </div>
+        <img src="../../static/imgs/result_wet_lab/Picture3.png" alt="">
+        <div class="brat"> 
+            Figure 9. The time-course fluorescence intensity curves of FQ reporter cleavage by different Cas-crRNA in the presence of DNA targets.
+            </div>
+            <div class="paragraph">
+            &nbsp;&nbsp;&nbsp;&nbsp;Further, the DNA detection performances of mutants were investigated by a series of DNA targets with different concentrations. The initial reaction rate of the fluorescence signal was employed to evaluate the trans-cleavage activity of different mutants. As shown in Figure 10, at all target concentrations, the trans-cleavage activities of Mut-1 and Mut-4 were both significantly higher than that of the wild-type CasΦ. But there was no significant difference between Mut-1 and Mut-4. At high (50 nM) or low (1.25 nM) concentration, the initial reaction rate of Mut-4 was higher than that of Mut-1; at the medium concentrations (2-25 nM), the reaction rates of Mut-1 were higher than that of Mut-4. Although this conclusion still needs more experimental data to be proved, the preliminary results show that the Mut-4 constructed by our team has a good trans-cleavage activity for DNA detection.
+            </div>
+            <img src="../../static/imgs/result_wet_lab/Picture4.png" alt="">
+            <div class="brat">
+                Figure 10. The reaction rates of FQ reporter cleavage by Cas-crRNA in the presence of DNA targets with different concentrations.
                 </div>
                 
-                <!-- 标题二 -->
-                <h2>The trans-cleavage activity of mutants</h2>
-                <h3>Ultrasonication</h3>
-                <div class="paragraph">
-                    1. Take out the bacteria and melt it at room temperature. <br>
-                    2. Place the tube that contains the bacterial fluid in a beaker and bathe it with ice water. Then sonicate the tube until the bacterial fluid is clear. <br>
+                <h2>     Specificity for single-base difference  </h2>    
+                <div class="paragraph"> 
+                &nbsp;&nbsp;&nbsp;&nbsp;The ability of detection method to distinguish the single-base difference in the target sequence is very important in nucleic acid detection. Especially in DNA mutation analysis, it is necessary to detect the target sequence with a single-base mutation from the background of a large number of wild-type sequences. In order to test the recognition ability of wild-type CasΦ and mutants to single-base difference targets, we introduced a single-base mismatch at different positions in the target sequences (Table 2). As shown in Figure 11, when the single-base mismatch was at position 11 or 12 (number from 3 'end), the nonspecific signals produced by wild-type CasΦ or mutants can be almost ignored, indicating that CasΦ has high recognition specificity for single-base mismatch at these positions. This may be due to the reduced stability of the crRNA/DNA hybrid when the single-base mismatch is located in the middle region of the crRNA and DNA target hybridization. However, when the single-base mismatch was at position 13 (number from 3 'end), all of these three CasΦ nucleases produce non-specific signals that were comparable with the complementary target. Because the target recognition region of CRISPR-Cas system was limited by PAM sequence, the tolerance of mismatch would hinder the application of CRISPR-Cas system in DNA mutation analysis.
                 </div>
-                <h3>Centrifugation</h3>
-                <div class="paragraph">
-                    3. Centrifuge the bacterial fluid (10000×g, 30min).
-                </div>
-                <h3>Pass through Ni column</h3>
-                <div class="paragraph">
-                    4. Equilibrate the Ni column with distilled water and then binding buffer. <br>
-                    5. Elute the protein with 20mM, 30mM, 60mM, 150mM, and 300mM imidazole respectively, and collect it at the end. <br>
-                    6. Ascertain the result of protein purification by PAGE electrophoresis. <br><br>
-                    12%PAGE Glue Formulation
-                </div>
-                <img src="../../static/imgs/method_wet_lab/Picture3.png" alt="">
-                <div class="paragraph">PAGE sample system configuration</div>
-                <img src="../../static/imgs/method_wet_lab/Picture4.png" alt="">
-                <h3>Ultrafiltration </h3>
-                <div class="paragraph">
-                    7. Using a 10 KDa ultrafiltration tube, add the collection solution (placed on an ice box) (Max=400 μL) and centrifuge at high speed (4 °C, 12000 × g, 4 min). <br>
-                    8. Discard the effluent, add the collection solution to the ultrafiltration tube, and repeat these steps until the entire collection solution is ultrafiltered. <br>
-                    9. Add protein diluent into the ultrafiltration tubes, blow and mix, and ultrafiltrate it. Repeat three times. <br>
-                    10 Bradford method for concentration measurement. <br>
-                    11. Sub-pack the solution and store at -80°C.
-                </div>
-                <!-- 标题三 -->
-                <h2>Specificity for single-base difference</h2>
-                <div class="paragraph">
-                    1. Set up the following 20 μl incubation system:
-                </div>
-                <img src="../../static/imgs/method_wet_lab/Picture5.png" alt="">
-                <div class="paragraph">Dissolved in ddH2O, the mixture was incubated at 37℃ for 30min.</div>
-                <div class="paragraph">2.  Add following reagents to each protein reaction system after incubation to the certain concentration, and the volume of the overall system is 60ul:</div>
-                <img src="../../static/imgs/method_wet_lab/Picture6.png" alt="">
-                <div class="paragraph">3. Evenly mix the system and add it to 96-hole plates, 20 μl for each hole. Fluorescence signals were obtained every 2 minutes at 37°C.</div>
-                <!-- 标题四 -->
-                <h2>Effect of crRNA secondary structure on specificity of CRISPR-Cas system</h2>
-                <div class="paragraph">
-                    1.Set up the following 20 μl incubation system: <br>
-                    Dissolved in ddH2O, the mixture was incubated at 37℃ for 30min. <br>
-                    2.Add following reagents to each protein reaction system after incubation to the certain concentration, and the volume of the overall system is 60ul: <br>
-                </div>
-                <img src="../../static/imgs/method_wet_lab/Picture7.png" alt="">
-                <div class="paragraph">3. Evenly mix the system, add it to 96-hole plates, 20 μl for each hole. Fluorescence signals were obtained every 2 minutes at 37°C. </div>
-                <!-- 标题五 -->
-                <h2>Performance of optimized system for DNA mutation detection</h2>
-                <div class="paragraph">
-                    1. Set up the following 20 μl incubation system: 
-                </div>
-                <img src="../../static/imgs/method_wet_lab/Picture8.png" alt="">
-                <div class="paragraph">Dissolved in ddH2O, the mixture was incubated at 37℃ for 30min.</div>
-                <div class="paragraph">2. Add following reagents to each protein reaction system after incubation to the certain concentration, and the volume of the overall system is 60ul:</div>
-                <img src="../../static/imgs/method_wet_lab/Picture9.png" alt="">
-                <div class="paragraph">3. Evenly mix the system, add it to 96-hole plates, 20 μ l for each hole. Fluorescence signals were obtained every 2 minutes at 37°C. </div>
-                
+                <img src="../../static/imgs/result_wet_lab/Picture5.png" alt="">
+                <div class="brat"> 
+                    Figure 11. The reaction rates of FQ reporter cleavage by Cas-crRNA in the presence of DNA targets with single-base mismatch.
+                    </div>
+                    <h2>Effect of crRNA secondary structure on specificity of CRISPR-Cas system</h2>
+                    <div class="paragraph">
+                    &nbsp;&nbsp;&nbsp;&nbsp;As reported by Gersbach et al. a hairpin secondary structure onto the spacer region of crRNA can increase the CRISPR-Cas system specificity for target cleavage. To verify whether this strategy is effective for the trans-cleavage activity of CasΦ, we introduced different lengths of hairpin structures into the crRNA of CasΦ (Table 3). The FQ-reporter assays showed that the recognition of complementary target or mismatch target by Mut-4 was affected by the hairpin structure in crRNA at the same time. And the same results were obtained on wild-type CasΦ and Mut-1 (data not shown). By comparing the specific signal from the complementary target and the non-specific signal from MT13, we found that crRNA with a 4-base pair stem structure (H4) may be able to improve the specificity of the CasΦ system for target detection. (Figure 12)
+                     </div>
+                    
+                    <div class="brat"> Table 3. The sequence of crRNAs with hairpin structures</div>
+                    <img src="../../static/imgs/result_wet_lab/Picture6.png" alt="">
+                    <img src="../../static/imgs/result_wet_lab/Picture7.png" alt="">
+                    <div class="brat">Figure 12. The reaction rates of FQ reporter cleavage by Mut-4 with hairpin structure crRNA.
+                    </div>
+                    <h2>Performance of optimized system for DNA mutation detection</h2>
+                    <div class="paragraph">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Finally, in order to verify the performance of our optimization CRISPR-Cas system for picking up DNA mutations from a large number of background sequences, we mixed different amounts of target sequences with mismatch sequences (MT13) to simulate artificial samples containing 50% to 0% DNA mutations. We chose Mut-4 and crRNA H4 to construct the mutation detection system. As shown in Figure 13, compared with the conventional wild-type CasΦ - hairpin free crRNA system (WT/CrRNA in Figure 13), the Mut-4/H4 system showed better mutation detection performance. For WT/CrRNA system, only when the fraction of target sequences was more than 10% can the signal differentiated from the mismatch sequences be generated. For Mut-4/H4, even if the fraction of target sequences was as low as 2%, the initial reaction rate of the fluorescence signal was still higher than that of the mismatch sequences.
+                    </div>
+                    <img src="../../static/imgs/result_wet_lab/Picture8.png" alt="">
+                    <div class="brat">
+                        Figure 13. The reaction rates of FQ reporter cleavage with samples containing 50% to 0% DNA mutations.
+                        </div>
+                        
+
+
             </div>
         </div>
     </section>

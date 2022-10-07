@@ -99,6 +99,7 @@ section {
 }
 
 .sectionRight img {
+    object-fit:contain;
     width: 1100px;
     margin-bottom: 20px;
 }
